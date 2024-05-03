@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "model": "Model Y",
+        "intro": "PCH from £399/mo*",
+        "description": "",
+        "disclaimer": "*Advance Rental £3,591 I 36 monthly rentals of £399 I Annual Mileage 10,000 miles p.a. I Excess Mileage from 16 pence per mile. Personal customers only. Representative example applies to Model Y Rear-Wheel Drive ordered and delivered by 30 June 2024. Terms and Conditions apply. Tesla Motors Limited (FRN 677768) acts as a credit broker and not a lender. Tesla Motors Limited’s registered office and postal address is 185 Ashton New Rd, Manchester, M11 3DX.",
+        "backgroundImgLg": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-Global.png",
+        "backgroundImgSm": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Mobile-Global.jpg",
+        "infoPageImg": "https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/TD_modely.jpg"
+    },
+    {
+        "id": "2",
+        "model": "Model 3",
+        "intro": "2% Company Car Tax.",
+        "description": "",
+        "disclaimer": "",
+        "backgroundImgLg": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-3-Desktop-RHD-v2.jpg",
+        "backgroundImgSm": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-3-Mobile-RHD-v2.jpg",
+        "infoPageImg": "https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/TD_modely.jpg"
+    },
+    {
+        "id": "3",
+        "model": "Model S",
+        "intro": "",
+        "description": "",
+        "disclaimer": "Only available as left-hand drive",
+        "backgroundImgLg": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto:best/Model-S-homepage-desktop",
+        "backgroundImgSm": "https://digitalassets.tesla.com/tesla-contents/image/upload/h_1624,w_750,c_fit,f_auto,q_auto:best/Model-S-homepage-mobile",
+        "infoPageImg": "https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/TD_modely.jpg"
+    },
+    {
+        "id": "4",
+        "model": "Model X",
+        "intro": "",
+        "description": "",
+        "disclaimer": "Only available as left-hand drive",
+        "backgroundImgLg": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-X-Desktop.jpg",
+        "backgroundImgSm": "https://digitalassets.tesla.com/tesla-contents/image/upload/h_1700,w_800,c_fit,f_auto,q_auto:best/Homepage-Model-X-Mobile-LHD_001",
+        "infoPageImg": "https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/TD_modely.jpg"
+    }
+]
