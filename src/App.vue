@@ -6,9 +6,7 @@ const cars = reactive(carData);
 </script>
 
 <template>
-<ul>
-    <li v-for="car in cars" :key="car.id">{{ car.model }}</li>
-</ul>
+
 </template>
 
 <style scoped>
