@@ -10,23 +10,9 @@
                         <span :class="item.icon" />
                         <span style="cursor: pointer; color: black; font-weight: 500; margin-left: 8px; margin-right: 8px;" class="ml-2">{{ item.label }}</span>
                     </a>
-                    <a v-else-if="!item.image">
-                        <span>
-                            <i :class="[item.icon, 'text-lg']"></i>
-                        </span>
-                        <span style="margin-left: 5px; margin-right: 5px;">
-                            <span style="color: black; font-weight: 500;">{{ item.label }}</span>
-                            <span>{{ item.subtext }}</span>
-                        </span>
-                    </a>
-                    <div v-else>
-                        <img alt="megamenu-demo" :src="item.image" class="w-full" />
-                        <span>{{ item.subtext }}</span>
-                        <Button :label="item.label" outlined />
-                    </div>
                 </template>
                 <template #end>
-                    <div class="icons-container">
+                    <div class="icons-container" v-show="screenwidth">
                         <QuestionIcon />
                         <GlobeIcon />
                         <ProfileIcon />
@@ -44,6 +30,10 @@ import LogoIcon from "../assets/icons/LogoIcon.vue";
 import QuestionIcon from "../assets/icons/QuestionIcon.vue";
 import GlobeIcon from "../assets/icons/GlobeIcon.vue";
 import ProfileIcon from "../assets/icons/ProfileIcon.vue";
+
+const screenwidth = ref(true);
+
+
 
 const items = ref([
     {
@@ -73,7 +63,7 @@ const items = ref([
 .nav-bar .card .p-megamenu {
     display: flex;
     justify-content: space-between;
-    padding: 25px;
+    padding: 20px;
     font-family: "Montserrat", sans-serif;
 }
 .nav-bar .p-megamenu .p-megamenu-start svg {
