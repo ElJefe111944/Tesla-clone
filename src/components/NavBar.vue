@@ -33,8 +33,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Shop</a>
                         </li>
+                        <li class="nav-item" v-show="!showIcons">
+                            <a class="nav-link" href="#">
+                                <GlobeIcon /> Language
+                            </a>
+                        </li>
+                        <li class="nav-item" v-show="!showIcons">
+                            <a class="nav-link" href="#">
+                                <ProfileIcon /> Account
+                            </a>
+                        </li>
                     </ul>
-                    <div class="icons-container">
+                    <div class="icons-container" v-show="showIcons">
                         <QuestionIcon />
                         <GlobeIcon />
                         <ProfileIcon />
@@ -50,6 +60,13 @@ import LogoIcon from "../assets/icons/LogoIcon.vue";
 import QuestionIcon from "../assets/icons/QuestionIcon.vue";
 import GlobeIcon from "../assets/icons/GlobeIcon.vue";
 import ProfileIcon from "../assets/icons/ProfileIcon.vue";
+import { computed } from "vue";
+
+const showIcons = computed(() => {
+    const isMobile = window.innerWidth > 991;
+
+    return isMobile;
+});
 
 
 </script>
