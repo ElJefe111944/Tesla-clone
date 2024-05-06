@@ -7,12 +7,12 @@
             </div>
             <div class="content-body">
                 <div class="options-container">
-                <button class="btn btn-primary" type="button">Button</button>
-                <button class="btn btn-primary" type="button">Button</button>
-            </div>
-            <div class="test-drive-cta-container">
-                <a href="#">Schedule a Test Drive</a>
-            </div>
+                    <BaseButton mode="light">Order Now</BaseButton>
+                    <BaseButton mode="dark">Test Drive</BaseButton>
+                </div>
+                <div class="test-drive-cta-container">
+                    <a href="#">Schedule a Test Drive</a>
+                </div>
             </div>
         </div>
     </section>
@@ -20,6 +20,7 @@
 
 <script setup>
 import { computed } from 'vue';
+import BaseButton from '../ui/slots/BaseButton.vue';
 
 
 const backgroundImg = computed(() => {
