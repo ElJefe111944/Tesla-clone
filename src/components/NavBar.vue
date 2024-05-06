@@ -49,6 +49,9 @@ import ProfileIcon from "../assets/icons/ProfileIcon.vue";
 nav.navbar.navbar-expand-lg {
     padding: 8px 32px;
     background: rgba(0,0,0,0.0);
+    position: absolute;
+    z-index: 1;
+    width: 100%;
 }
 .navbar-expand-lg .navbar-collapse ul {
     margin: auto;
