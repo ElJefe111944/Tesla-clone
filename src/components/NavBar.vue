@@ -4,32 +4,41 @@
             <a class="navbar-brand" href="#">
                 <LogoIcon />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="menu-toggle-cta">Menu</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Vehicles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Energy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Charging</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Discover</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                </ul>
-                <div class="icons-container">
-                    <QuestionIcon />
-                    <GlobeIcon />
-                    <ProfileIcon />
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="#">
+                        <LogoIcon />
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Vehicles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Energy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Charging</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Discover</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                    </ul>
+                    <div class="icons-container">
+                        <QuestionIcon />
+                        <GlobeIcon />
+                        <ProfileIcon />
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,11 +63,11 @@ nav.navbar.navbar-expand-lg {
     width: 100%;
 }
 
-.navbar-expand-lg .navbar-collapse ul {
+.navbar-expand-lg ul {
     margin: auto;
 }
 
-.navbar-expand-lg .navbar-collapse ul,
+.navbar-expand-lg ul,
 .menu-toggle-cta {
     margin: auto;
     font-size: 14px;
@@ -67,7 +76,7 @@ nav.navbar.navbar-expand-lg {
     gap: 10px;
 }
 
-.navbar-expand-lg .navbar-collapse ul li a {
+.navbar-expand-lg ul li a {
     color: #000;
 }
 
@@ -86,6 +95,11 @@ nav.navbar.navbar-expand-lg {
 @media(max-width: 768px) {
     nav.navbar.navbar-expand-lg[data-v-c3ceb15a] {
         padding: 6px 4px;
+    }
+
+    .offcanvas.offcanvas-end {
+        left: 0;
+        width: 100%;
     }
 }
 </style>
