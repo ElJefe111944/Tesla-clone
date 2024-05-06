@@ -33,18 +33,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Shop</a>
                         </li>
-                        <li class="nav-item" v-show="!showIcons">
+                        <li class="nav-item" v-show="hideIcons">
                             <a class="nav-link" href="#">
                                 <GlobeIcon /> Language
                             </a>
                         </li>
-                        <li class="nav-item" v-show="!showIcons">
+                        <li class="nav-item" v-show="hideIcons">
                             <a class="nav-link" href="#">
                                 <ProfileIcon /> Account
                             </a>
                         </li>
                     </ul>
-                    <div class="icons-container" v-show="showIcons">
+                    <div class="icons-container" v-show="!hideIcons">
                         <QuestionIcon />
                         <GlobeIcon />
                         <ProfileIcon />
@@ -60,14 +60,26 @@ import LogoIcon from "../assets/icons/LogoIcon.vue";
 import QuestionIcon from "../assets/icons/QuestionIcon.vue";
 import GlobeIcon from "../assets/icons/GlobeIcon.vue";
 import ProfileIcon from "../assets/icons/ProfileIcon.vue";
-import { computed } from "vue";
+import { computed, ref, onMounted, onBeforeUnmount } from "vue";
 
-const showIcons = computed(() => {
-    const isMobile = window.innerWidth > 991;
-
-    return isMobile;
+// state
+const isMobile = ref(false);
+// computed
+const hideIcons = computed(() => {
+    return isMobile.value;
 });
-
+// method 
+const handleResize = () => {
+    isMobile.value = window.innerWidth < 991;
+};
+// lifecycle hooks
+onMounted(() => {
+    window.addEventListener('resize', handleResize);
+ 
+})
+onBeforeUnmount(() => {
+    window.removeEventListener('resize', handleResize);
+})
 
 </script>
 
@@ -117,9 +129,6 @@ nav.navbar.navbar-expand-lg {
     .offcanvas.offcanvas-end {
         left: 0;
         width: 100%;
-    }
-    .icons-container {
-        display: none;
     }
 }
 </style>
