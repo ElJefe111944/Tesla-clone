@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <LogoIcon />
@@ -46,6 +46,25 @@ import ProfileIcon from "../assets/icons/ProfileIcon.vue";
 </script>
 
 <style scoped>
-
-
+nav.navbar.navbar-expand-lg {
+    padding: 8px 32px;
+    background: rgba(0,0,0,0.0);
+}
+.navbar-expand-lg .navbar-collapse ul {
+    margin: auto;
+}
+.navbar-expand-lg .navbar-collapse ul {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    gap: 10px;
+}
+.navbar-expand-lg .navbar-collapse ul li a {
+    color: #000;
+}
+.icons-container {
+    display: flex;
+    gap: 10px;
+}
 </style>
