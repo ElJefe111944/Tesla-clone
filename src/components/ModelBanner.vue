@@ -79,4 +79,15 @@ const backgroundImg = computed(() => {
     font-size: 12px;
     color: #fff;
 }
+@media(max-width: 768px){
+    .options-container[data-v-27f2308d] {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .options-container[data-v-27f2308d] button {
+        width: 250px;
+        height: auto;
+    }
+}
 </style>

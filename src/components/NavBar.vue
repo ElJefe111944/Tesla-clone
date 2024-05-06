@@ -48,14 +48,16 @@ import ProfileIcon from "../assets/icons/ProfileIcon.vue";
 <style scoped>
 nav.navbar.navbar-expand-lg {
     padding: 8px 32px;
-    background: rgba(0,0,0,0.0);
+    background: rgba(0, 0, 0, 0.0);
     position: absolute;
     z-index: 1;
     width: 100%;
 }
+
 .navbar-expand-lg .navbar-collapse ul {
     margin: auto;
 }
+
 .navbar-expand-lg .navbar-collapse ul,
 .menu-toggle-cta {
     margin: auto;
@@ -64,11 +66,13 @@ nav.navbar.navbar-expand-lg {
     color: #000;
     gap: 10px;
 }
+
 .navbar-expand-lg .navbar-collapse ul li a {
     color: #000;
 }
+
 .navbar-toggler {
-    background: rgba(0,0,0,0.075);
+    background: rgba(0, 0, 0, 0.075);
     border: none;
     padding: 6px 12px;
     border-radius: 4px;
@@ -77,5 +81,11 @@ nav.navbar.navbar-expand-lg {
 .icons-container {
     display: flex;
     gap: 10px;
+}
+
+@media(max-width: 768px) {
+    nav.navbar.navbar-expand-lg[data-v-c3ceb15a] {
+        padding: 6px 4px;
+    }
 }
 </style>
