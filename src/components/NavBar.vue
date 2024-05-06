@@ -6,7 +6,7 @@
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="menu-toggle-cta">Menu</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -53,7 +53,8 @@ nav.navbar.navbar-expand-lg {
 .navbar-expand-lg .navbar-collapse ul {
     margin: auto;
 }
-.navbar-expand-lg .navbar-collapse ul {
+.navbar-expand-lg .navbar-collapse ul,
+.menu-toggle-cta {
     margin: auto;
     font-size: 14px;
     font-weight: 500;
@@ -63,6 +64,13 @@ nav.navbar.navbar-expand-lg {
 .navbar-expand-lg .navbar-collapse ul li a {
     color: #000;
 }
+.navbar-toggler {
+    background: rgba(0,0,0,0.075);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
 .icons-container {
     display: flex;
     gap: 10px;
