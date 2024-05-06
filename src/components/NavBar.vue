@@ -118,5 +118,8 @@ nav.navbar.navbar-expand-lg {
         left: 0;
         width: 100%;
     }
+    .icons-container {
+        display: none;
+    }
 }
 </style>

@@ -19,15 +19,28 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import BaseButton from '../ui/slots/BaseButton.vue';
+// state
+const isMobile = ref(false);
 
-
+// computed
 const backgroundImg = computed(() => {
-    const isMobile = window.innerWidth < 768;
 
-    return isMobile ? 'url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Mobile-Global.jpg)' : 'url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-Global.png)';
+    return isMobile.value ? 'url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Mobile-Global.jpg)' : 'url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-Global.png)';
 });
+// methods
+const handleResize = () => {
+    isMobile.value = window.innerWidth < 768;
+};
+// lifecycle hooks
+onMounted(() => {
+    window.addEventListener('resize', handleResize);
+ 
+})
+onBeforeUnmount(() => {
+    window.removeEventListener('resize', handleResize);
+})
 </script>
 
 <style scoped>
