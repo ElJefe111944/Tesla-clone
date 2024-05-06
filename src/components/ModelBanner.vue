@@ -24,6 +24,43 @@ import BaseButton from '../ui/slots/BaseButton.vue';
 // state
 const isMobile = ref(false);
 
+// props
+const props = defineProps({
+  id: {
+    type: String,
+    required: true
+  },
+  model: {
+    type: String,
+    required: true
+  },
+  intro: {
+    type: String,
+    required: false
+  },
+  description: {
+    type: String,
+    required: false
+  },
+  backgroundImgLg: {
+    type: String,
+    required: true
+  },
+  backgroundImgSm: {
+    type: String,
+    required: true
+  },
+  disclaimer: {
+    type: String,
+    required: false
+  },
+  infoPageImg: {
+    type: String,
+    required: false
+  },
+})
+console.log(props.id)
+
 // computed
 const backgroundImg = computed(() => {
 

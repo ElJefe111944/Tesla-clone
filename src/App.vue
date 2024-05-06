@@ -6,11 +6,15 @@ import ModelBanner from './components/ModelBanner.vue';
 
 const cars = reactive(carData);
 
+console.log(cars[0]);
+console.log(cars[1]);
+console.log(cars[2]);
+console.log(cars[3]);
 </script>
 
 <template>
     <NavBar />
-    <ModelBanner />
+    <ModelBanner :car="cars[0].id" />
 </template>
 
 <style scoped>

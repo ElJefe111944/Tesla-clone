@@ -12,7 +12,6 @@ const props = defineProps({
         default: 'light'
     },
 })
-console.log(props.mode);
 </script>
 
 <style scoped>
