@@ -5,11 +5,11 @@
                 <source :src="videoBackground" type="video/mp4">
             </video>
             <div class="video-content-container">
-            <div class="video-content-title">
+            <div class="video-content-title" v-animateonscroll="{ enterClass: 'fadeinleft', leaveClass: 'fadeoutleft' }">
                 <h1>{{ title }}</h1>
                 <h3>{{ intro }}</h3>
             </div>
-            <div class="video-content-body">
+            <div class="video-content-body" v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
                 <div class="options-container">
                     <BaseButton :mode="mode">{{ ctaText }}</BaseButton>
                 </div>
@@ -154,5 +154,53 @@ video.object-fit-cover.video-spot {
         width: 250px;
         height: auto;
     }
+}
+
+/* Animation */
+
+/* Animation */
+/* Applying the animation to the enter class */
+.fadein {
+  animation-name: fadein;
+  animation-duration: 1s; /* Adjust duration as needed */
+  animation-fill-mode: both; /* Keeps the element at the end state after the animation completes */
+  animation-timing-function: ease-out; /* Adjust timing function as needed */
+}
+
+/* Keyframes for fading out */
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px); /* Adjust the translateX value as needed */
+  }
+}
+
+/* Applying the animation to the leave class */
+.fadeout {
+  animation-name: fadeout;
+  animation-duration: 1s; /* Adjust duration as needed */
+  animation-fill-mode: both;
+  animation-timing-function: ease-in; /* Adjust timing function as needed */
+}
+
+@keyframes fadeinleft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeinleft {
+  animation-name: fadeinleft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 </style>
