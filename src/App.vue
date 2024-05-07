@@ -7,6 +7,8 @@ import NavBar from "./components/NavBar.vue";
 import ModelBanner from './components/ModelBanner.vue';
 import CategorySpot from './components/CategorySpot.vue';
 import VideoSpot from './components/VideoSpot.vue';
+import Footer from './components/Footer.vue';
+
 
 // state
 const cars = reactive(carData);
@@ -25,7 +27,7 @@ console.log(video[0])
     <ModelBanner :car="cars[3]" />
     <VideoSpot :video="video[0]" />
     <CategorySpot :category="category[1]" />
-    <!-- Footer -->
+    <Footer />
 </template>
 
 <style scoped></style>
