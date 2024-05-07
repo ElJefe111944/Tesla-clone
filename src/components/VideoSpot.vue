@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="video-banner">
-            <video autoplay muted loop class="object-fit-cover video-spot">
+            <video playsinline webkit-playsinline autoplay muted loop class="object-fit-cover video-spot">
                 <source :src="videoBackground" type="video/mp4">
             </video>
             <div class="video-content-container">
