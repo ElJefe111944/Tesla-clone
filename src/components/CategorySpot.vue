@@ -22,7 +22,7 @@ const isMobile = ref(false);
 
 // props
 const props = defineProps({
-    categories: {
+    category: {
         id: {
             type: String,
             required: true
@@ -63,7 +63,7 @@ const {
     backgroundImgLg, 
     backgroundImgSm, 
     mode 
-} = props.categories;
+} = props.category;
 
 
 // computed
