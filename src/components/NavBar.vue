@@ -121,14 +121,14 @@ nav.navbar.navbar-expand-lg {
     gap: 10px;
 }
 
+.offcanvas.offcanvas-end {
+        left: 0;
+        width: 100%;
+    }
+
 @media(max-width: 768px) {
     nav.navbar.navbar-expand-lg[data-v-c3ceb15a] {
         padding: 6px 4px;
-    }
-
-    .offcanvas.offcanvas-end {
-        left: 0;
-        width: 100%;
     }
 }
 </style>

@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "mode": "dark",
+        "title": "Solar and Powerwall",
+        "intro": "Power Everything",
+        "ctaText": "Learn More",
+        "backgroundImgLg": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Desktop_SolarPanels.jpg",
+        "backgroundImgSm": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mobile_SolarPanels.jpg"
+    },
+    {
+        "id": "2",
+        "mode": "light",
+        "title": "Accessories",
+        "intro": "",
+        "ctaText": "Shop Now",
+        "backgroundImgLg": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Accessories-Desktop-EMEA.jpg",
+        "backgroundImgSm": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Accessories-Mobile-EMEA.jpg"
+    }
+]

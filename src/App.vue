@@ -15,8 +15,13 @@ console.log(cars[3]);
 <template>
     <NavBar />
     <ModelBanner :car="cars[0]" />
+    <ModelBanner :car="cars[1]" />
+    <ModelBanner :car="cars[2]" />
+    <!-- Category - Solar & PowerWall -->
+    <ModelBanner :car="cars[3]" />
+    <!-- Category - Experience Tesla -->
+    <!-- Category - Accessories -->
+    <!-- Footer -->
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,0 +1,11 @@
+{
+    "id": "1",
+    "mode": "transparent",
+    "title": "Experience Tesla",
+    "intro": "Schedule a Test Drive Today",
+    "ctaText": "Test Drive",
+    "backgroundImgLg": "",
+    "backgroundImgSm": "",
+    "videoLg": "https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4",
+    "videoSm": "https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Mobile-NA.mp4#t=0.01"
+}
