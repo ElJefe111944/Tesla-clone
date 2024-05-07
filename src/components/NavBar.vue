@@ -23,6 +23,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Energy</a>
+                            <!-- <ul class="nav-dropdown">
+                                This is a dropdown
+                            </ul> -->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Charging</a>

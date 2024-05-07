@@ -14,7 +14,7 @@ import Footer from './components/Footer.vue';
 const cars = reactive(carData);
 const category = reactive(CategoryData);
 const video = reactive(VideoData);
-console.log(video[0])
+
 
 </script>
 
