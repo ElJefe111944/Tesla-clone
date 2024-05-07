@@ -141,12 +141,12 @@ p.disclamer {
 }
 
 @media(max-width: 768px){
-    .options-container[data-v-27f2308d] {
+    .options-container {
         flex-direction: column;
         gap: 12px;
     }
 
-    .options-container[data-v-27f2308d] button {
+    .options-container button {
         width: 250px;
         height: auto;
     }

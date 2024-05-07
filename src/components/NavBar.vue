@@ -130,7 +130,7 @@ nav.navbar.navbar-expand-lg {
     }
 
 @media(max-width: 768px) {
-    nav.navbar.navbar-expand-lg[data-v-c3ceb15a] {
+    nav.navbar.navbar-expand-lg {
         padding: 6px 4px;
     }
 }

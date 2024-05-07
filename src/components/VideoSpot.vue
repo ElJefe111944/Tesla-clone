@@ -103,7 +103,7 @@ video.object-fit-cover.video-spot {
     height: 100%;
        
 }
-.video-content-container[data-v-ad40a6b4] {
+.video-content-container {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -145,12 +145,12 @@ video.object-fit-cover.video-spot {
 }
 
 @media(max-width: 768px){
-    .options-container[data-v-27f2308d] {
+    .options-container {
         flex-direction: column;
         gap: 12px;
     }
 
-    .options-container[data-v-27f2308d] button {
+    .options-container button {
         width: 250px;
         height: auto;
     }
