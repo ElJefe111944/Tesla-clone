@@ -14,7 +14,7 @@ console.log(cars[3]);
 
 <template>
     <NavBar />
-    <ModelBanner :car="cars[0].id" />
+    <ModelBanner :car="cars[0]" />
 </template>
 
 <style scoped>

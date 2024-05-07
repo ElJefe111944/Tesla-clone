@@ -2,8 +2,8 @@
     <section class="background-banner" :style="{ backgroundImage: backgroundImg }">
         <div class="content-container">
             <div class="content-title">
-                <h1>Model Y</h1>
-                <h3>PCH from £399/mo*</h3>
+                <h1>{{ model }}</h1>
+                <h3>{{ intro }}</h3>
             </div>
             <div class="content-body">
                 <div class="options-container">
@@ -11,7 +11,8 @@
                     <BaseButton mode="dark">Test Drive</BaseButton>
                 </div>
                 <div class="test-drive-cta-container">
-                    <a href="#">Schedule a Test Drive</a>
+                    <p class="disclamer" v-if="disclaimer">{{ disclaimer }}</p>
+                    <a href="#" v-else>Schedule a Test Drive</a>
                 </div>
             </div>
         </div>
@@ -26,45 +27,58 @@ const isMobile = ref(false);
 
 // props
 const props = defineProps({
-  id: {
-    type: String,
-    required: true
-  },
-  model: {
-    type: String,
-    required: true
-  },
-  intro: {
-    type: String,
-    required: false
-  },
-  description: {
-    type: String,
-    required: false
-  },
-  backgroundImgLg: {
-    type: String,
-    required: true
-  },
-  backgroundImgSm: {
-    type: String,
-    required: true
-  },
-  disclaimer: {
-    type: String,
-    required: false
-  },
-  infoPageImg: {
-    type: String,
-    required: false
-  },
+    car: {
+        id: {
+            type: String,
+            required: true
+        },
+        model: {
+            type: String,
+            required: true
+        },
+        intro: {
+            type: String,
+            required: false
+        },
+        description: {
+            type: String,
+            required: false
+        },
+        backgroundImgLg: {
+            type: String,
+            required: true
+        },
+        backgroundImgSm: {
+            type: String,
+            required: true
+        },
+        disclaimer: {
+            type: String,
+            required: false
+        },
+        infoPageImg: {
+            type: String,
+            required: false
+        },
+    }
 })
-console.log(props.id)
+
+const { 
+    id , 
+    model, 
+    intro, 
+    description, 
+    backgroundImgLg, 
+    backgroundImgSm, 
+    disclaimer, 
+    infoPageImg 
+} = props.car;
+
 
 // computed
 const backgroundImg = computed(() => {
 
-    return isMobile.value ? 'url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Mobile-Global.jpg)' : 'url(https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-Global.png)';
+    return isMobile.value ? `url(${backgroundImgSm})` : `url(${backgroundImgLg})`;
 });
 // methods
 const handleResize = () => {
@@ -111,7 +125,7 @@ onBeforeUnmount(() => {
     display: flex;
     gap: 15px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
 }
 .options-container button {
     width: 225px;
@@ -125,9 +139,14 @@ onBeforeUnmount(() => {
 .test-drive-cta-container {
     text-align: center;
 }
-.test-drive-cta-container a {
+.test-drive-cta-container a,
+.test-drive-cta-container .disclamer {
     font-size: 12px;
     color: #fff;
+}
+p.disclamer {
+    width: 50%;
+    margin: auto;
 }
 @media(max-width: 768px){
     .options-container[data-v-27f2308d] {
@@ -139,5 +158,8 @@ onBeforeUnmount(() => {
         width: 250px;
         height: auto;
     }
+    p.disclamer {
+        display: none;
+}
 }
 </style>
