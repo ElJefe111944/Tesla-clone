@@ -2,13 +2,17 @@
 import { reactive } from 'vue';
 import carData from "./data/cars.json";
 import CategoryData from './data/category.json';
+import VideoData from './data/video-spots.json'
 import NavBar from "./components/NavBar.vue";
 import ModelBanner from './components/ModelBanner.vue';
 import CategorySpot from './components/CategorySpot.vue';
+import VideoSpot from './components/VideoSpot.vue';
 
 // state
 const cars = reactive(carData);
 const category = reactive(CategoryData);
+const video = reactive(VideoData);
+console.log(video[0])
 
 </script>
 
@@ -19,7 +23,7 @@ const category = reactive(CategoryData);
     <ModelBanner :car="cars[2]" />
     <CategorySpot :category="category[0]" />
     <ModelBanner :car="cars[3]" />
-    <!-- Video Spot - Experience Tesla -->
+    <VideoSpot :video="video[0]" />
     <CategorySpot :category="category[1]" />
     <!-- Footer -->
 </template>
